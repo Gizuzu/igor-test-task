@@ -8,9 +8,9 @@ body {
   background-color: #a770ff;
 }
 
-::before {
+body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -26,5 +26,5 @@ body {
     ),
     radial-gradient(circle, rgba(123, 64, 255) 1px, transparent 1px);
   background-position: 0 0, 10px 10px;
-  opacity: 0.3;
+  opacity: 0.8;
 }

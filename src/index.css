@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "PT Sans", serif;
+}
+
+body {
+  background-color: #a770ff;
+}
+
+::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-color: transparent;
+  z-index: -1;
+  background-size: 20px 20px;
+  background-image: radial-gradient(
+      circle,
+      rgba(123, 64, 255) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, rgba(123, 64, 255) 1px, transparent 1px);
+  background-position: 0 0, 10px 10px;
+  opacity: 0.3;
+}

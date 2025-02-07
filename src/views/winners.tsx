@@ -1,7 +1,7 @@
-import { HomeWideLogo } from "@/components/logos/home-wide";
-import { Navbar } from "@/components/navigation/navbar";
+import { HomeWideLogo } from "../components/logos/home-wide";
+import { Navbar } from "../components/navigation/navbar";
 
-function App() {
+function WinnersView() {
   return (
     <>
       <main className="max-w-[1200px] w-full mx-auto">
@@ -40,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default WinnersView;

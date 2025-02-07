@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { navigationLinks } from "../../config/navigation";
 import { ResolutionMenLogo } from "../logos/resolution-men";
 
@@ -12,9 +13,9 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-10 py-1">
           {navigationLinks.map((link, index) => (
-            <a
+            <Link
               key={index}
-              href={link.value}
+              to={link.value}
               className={
                 "uppercase tracking-wide text-xs text-white px-[22px] py-[12px] " +
                 (link.value === currentPathname
@@ -23,7 +24,7 @@ export function Navbar() {
               }
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
         <div></div>

@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router";
-import { navigationLinks } from "../../config/navigation";
+
+import { navigationLinks } from "@/config/navigation";
 import { ResolutionMenLogo } from "../logos/resolution-men";
 import GirlsOnly from "../icons/girls-only";
 

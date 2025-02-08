@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router";
+
 import QustionIcon from "@/components/icons/question";
 import {
   BeautifulPart,
@@ -5,8 +8,6 @@ import {
 } from "@/components/shared/smart-and-beautiful";
 import Button from "@/components/ui/button";
 import { routes } from "@/config/routes";
-import React from "react";
-import { Link } from "react-router";
 
 const smartRules = [
   <>

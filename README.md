@@ -4,20 +4,19 @@
 
 ```sh
 git clone https://github.com/Gizuzu/igor-test-task.git
-```
-
-```sh
 cd igor-test-task
-
-npm install
-# Или
-bun install
 ```
 
-### Запуск
+# Запуск через Bun
 
 ```sh
-npm run dev
-# Или
+bun i
 bun dev
+```
+
+# Запуск через Node.JS
+
+```sh
+npm i
+npm run dev
 ```

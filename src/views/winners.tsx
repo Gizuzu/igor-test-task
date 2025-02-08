@@ -17,6 +17,12 @@ function WinnersList({
   icon: React.FC;
   iconColor: string;
 }) {
+  // Костыль для тейлвинда
+  const iconClass =
+    iconColor === "#ffcf1f" ? "fill-[#ffcf1f]" : "fill-[#ff62bd]";
+  const textClass =
+    iconColor === "#ffcf1f" ? "text-[#ffcf1f]" : "text-[#ff62bd]";
+
   return (
     <div className="flex flex-col w-fit text-white">
       {winners.map((winner, index) => (
@@ -27,12 +33,10 @@ function WinnersList({
           <span>{index + 1}.</span>
           <span className="ml-4 tracking-widest">{winner.name}</span>
           <span className="ml-auto flex items-center justify-start gap-2 px-2 min-w-[60px] bg-black/10">
-            <span className={`fill-[${iconColor}] flex h-3 w-3`}>
+            <span className={`flex h-3 w-3 ${iconClass}`}>
               <Icon />
             </span>{" "}
-            <span className={`font-bold text-[${iconColor}]`}>
-              {winner.value}
-            </span>
+            <span className={`font-bold ${textClass}`}>{winner.value}</span>
           </span>
         </div>
       ))}

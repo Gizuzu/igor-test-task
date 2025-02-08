@@ -2,17 +2,12 @@ import { useEffect } from "react";
 
 export function HomeSquareLogo() {
   useEffect(() => {
-    const generalScript = document.createElement("script");
-    generalScript.src = "/logo_square.js";
-    document.body.appendChild(generalScript);
-
     const script = document.createElement("script");
-    script.src = "/logo_square_init.js";
+    script.src = "/logo_square.js";
     document.body.appendChild(script);
 
     return () => {
       document.body.removeChild(script);
-      document.body.removeChild(generalScript);
     };
   }, []);
 

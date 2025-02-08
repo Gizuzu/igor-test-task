@@ -1,10 +1,10 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { navigationLinks } from "../../config/navigation";
 import { ResolutionMenLogo } from "../logos/resolution-men";
 import GirlsOnly from "../icons/girls-only";
 
 export function Navbar() {
-  const currentPathname = window.location.pathname;
+  const location = useLocation();
 
   return (
     <>
@@ -19,7 +19,7 @@ export function Navbar() {
               to={link.value}
               className={
                 "uppercase tracking-wide text-xs text-white px-[22px] py-[12px] " +
-                (link.value === currentPathname
+                (link.value === location.pathname
                   ? "border-[1px] border-red-400"
                   : "")
               }

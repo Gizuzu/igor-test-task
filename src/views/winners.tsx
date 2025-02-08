@@ -1,8 +1,6 @@
-import QustionIcon from "@/components/icons/question";
 import { Navbar } from "../components/navigation/navbar";
 import CheckIcon from "@/components/icons/check";
 import HeartIcon from "@/components/icons/heart";
-import ChatDialog from "@/components/navigation/chat-dialog";
 
 const smartWinners = [
   {

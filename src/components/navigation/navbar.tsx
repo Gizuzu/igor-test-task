@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { navigationLinks } from "../../config/navigation";
 import { ResolutionMenLogo } from "../logos/resolution-men";
-import GirlsOnly from "../logos/girls-only";
+import GirlsOnly from "../icons/girls-only";
 
 export function Navbar() {
   const currentPathname = window.location.pathname;

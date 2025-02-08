@@ -3,6 +3,10 @@ import {
   BeautifulPart,
   SmartPart,
 } from "@/components/shared/smart-and-beautiful";
+import Button from "@/components/ui/button";
+import { routes } from "@/config/routes";
+import React from "react";
+import { Link } from "react-router";
 
 const smartRules = [
   <>
@@ -22,6 +26,28 @@ const beautifulRules = [
   "3. 5 красавиц тоже получат призы",
 ];
 
+function RulesList({
+  rules,
+  bgColor,
+}: {
+  rules: (string | React.ReactNode)[];
+  bgColor: string;
+}) {
+  return (
+    <ul>
+      {rules.map((rule, index) => (
+        <li key={index} className="mb-2">
+          <span
+            className={`tracking-widest text-[15px] uppercase px-1 ${bgColor}`}
+          >
+            {rule}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function RulesView() {
   return (
     <>
@@ -34,37 +60,21 @@ function RulesView() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div>
             <SmartPart />
-
-            <ul>
-              {smartRules.map((rule, index) => (
-                <li key={index} className="mb-2">
-                  <span className="bg-[#ffcf1f] tracking-widest text-[15px] uppercase px-1">
-                    {rule}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <RulesList rules={smartRules} bgColor="bg-[#ffcf1f]" />
           </div>
           <div>
             <BeautifulPart />
-
-            <ul>
-              {beautifulRules.map((rule, index) => (
-                <li key={index} className="mb-2">
-                  <span className="bg-[#ff62bd] tracking-widest text-[15px] uppercase px-1">
-                    {rule}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <RulesList rules={beautifulRules} bgColor="bg-[#ff62bd]" />
           </div>
         </div>
 
-        <button className="border-none bg-[#ff61bd] py-[8px] flex items-center px-[16px] mt-16 p-6 rounded-md">
-          <span className="text-white tracking-[.2rem] text-[21px] uppercase">
-            Узнать счёт
-          </span>
-        </button>
+        <Link to={routes.WINNERS} className="mt-16">
+          <Button className="bg-[#ff61bd]">
+            <span className="text-white tracking-[.2rem] text-[21px] uppercase">
+              Узнать счёт
+            </span>
+          </Button>
+        </Link>
       </section>
 
       <div className="absolute top-0 left-0 w-full py-4 -z-[1]">

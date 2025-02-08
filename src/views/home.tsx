@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
-import { HomeWideLogo } from "../components/logos/home-wide";
+import { HomeWideLogo } from "@/components/logos/home-wide";
 import { HomeSquareLogo } from "@/components/logos/home-square";
+import Button from "@/components/ui/button";
+import { routes } from "@/config/routes";
 
 function HomeView() {
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
@@ -35,11 +38,13 @@ function HomeView() {
           </span>
         </div>
 
-        <button className="border-none bg-[#00d5ff] py-[8px] flex items-center px-[16px] mt-8 p-6 rounded-md">
-          <span className="text-white tracking-[.2rem] text-[21px] uppercase">
-            Участвовать
-          </span>
-        </button>
+        <Link to={routes.RULES} className="mt-8">
+          <Button>
+            <span className="text-white tracking-[.2rem] text-[21px] uppercase">
+              Участвовать
+            </span>
+          </Button>
+        </Link>
       </section>
 
       <span className="z-10 text-white uppercase text-xs tracking-widest absolute bottom-2 left-4">

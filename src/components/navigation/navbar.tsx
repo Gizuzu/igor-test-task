@@ -30,7 +30,7 @@ export function Navbar() {
         </div>
         <div></div>
 
-        <div className="hidden absolute lg:flex -top-4 right-0">
+        <div className="absolute flex -top-4 right-0">
           <div className="relative">
             <div className="fill-[#ffd01f] -rotate-25 h-32 w-32 flex relative">
               <GirlsOnly />

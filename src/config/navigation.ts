@@ -1,14 +1,16 @@
+import { routes } from "./routes";
+
 export const navigationLinks = [
   {
     label: "О май гад",
-    value: "/",
+    value: routes.HOME,
   },
   {
     label: "Правила",
-    value: "/rules",
+    value: routes.RULES,
   },
   {
     label: "Победители",
-    value: "/winners",
+    value: routes.WINNERS,
   },
 ];

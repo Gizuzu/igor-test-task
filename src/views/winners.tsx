@@ -6,6 +6,40 @@ import {
 } from "@/components/shared/smart-and-beautiful";
 import { beautifulWinners, smartWinners } from "@/config/winners";
 
+type WinnerType = (typeof beautifulWinners)[0];
+
+function WinnersList({
+  winners,
+  icon: Icon,
+  iconColor,
+}: {
+  winners: WinnerType[];
+  icon: React.FC;
+  iconColor: string;
+}) {
+  return (
+    <div className="flex flex-col w-fit text-white">
+      {winners.map((winner, index) => (
+        <div
+          key={index}
+          className="text-[15px] uppercase flex items-center gap-4 w-full"
+        >
+          <span>{index + 1}.</span>
+          <span className="ml-4 tracking-widest">{winner.name}</span>
+          <span className="ml-auto flex items-center gap-2 px-2 bg-black/10">
+            <span className={`fill-[${iconColor}] flex h-3 w-3`}>
+              <Icon />
+            </span>{" "}
+            <span className={`font-bold text-[${iconColor}]`}>
+              {winner.value}
+            </span>
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function WinnersView() {
   return (
     <>
@@ -13,49 +47,19 @@ function WinnersView() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div>
             <SmartPart />
-
-            <div className="flex flex-col w-fit text-white">
-              {smartWinners.map((winner, index) => (
-                <div
-                  key={index}
-                  className="text-[15px] uppercase flex items-center gap-4 w-full"
-                >
-                  <span>{index + 1}.</span>
-                  <span className="ml-4 tracking-widest">{winner.name}</span>
-                  <span className="ml-auto flex items-center gap-2 px-2 bg-black/10">
-                    <span className="fill-[#ffcf1f] flex h-3 w-3">
-                      <CheckIcon />
-                    </span>{" "}
-                    <span className="font-bold text-[#ffcf1f]">
-                      {winner.value}
-                    </span>
-                  </span>
-                </div>
-              ))}
-            </div>
+            <WinnersList
+              winners={smartWinners}
+              icon={CheckIcon}
+              iconColor="#ffcf1f"
+            />
           </div>
           <div>
             <BeautifulPart />
-
-            <div className="flex flex-col w-fit text-white">
-              {beautifulWinners.map((winner, index) => (
-                <div
-                  key={index}
-                  className="text-[15px] uppercase flex items-center gap-4 w-full"
-                >
-                  <span>{index + 1}.</span>
-                  <span className="ml-4 tracking-widest">{winner.name}</span>
-                  <span className="ml-auto flex items-center gap-2 px-2 bg-black/10">
-                    <span className="fill-[#ff62bd] flex h-3 w-3">
-                      <HeartIcon />
-                    </span>{" "}
-                    <span className="font-bold text-[#ff62bd]">
-                      {winner.value}
-                    </span>
-                  </span>
-                </div>
-              ))}
-            </div>
+            <WinnersList
+              winners={beautifulWinners}
+              icon={HeartIcon}
+              iconColor="#ff62bd"
+            />
           </div>
         </div>
 

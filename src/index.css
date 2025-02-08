@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: "PT Sans", serif;
+  --breakpoint-lg: 1200px;
 }
 
 body {

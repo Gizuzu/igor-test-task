@@ -8,11 +8,11 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="px-[38px] py-[34px] w-full flex items-center gap-[180px] relative">
+      <nav className="px-[38px] py-[34px] w-full flex flex-col lg:flex-row items-center gap-4 lg:gap-[180px] relative">
         <div className="flex h-5 w-46 fill-[#f1f1f1]">
           <ResolutionMenLogo />
         </div>
-        <div className="flex items-center gap-10 py-1">
+        <div className="flex flex-wrap justify-center items-center gap-10 py-1">
           {navigationLinks.map((link, index) => (
             <Link
               key={index}
@@ -30,7 +30,7 @@ export function Navbar() {
         </div>
         <div></div>
 
-        <div className="absolute flex -top-4 right-0">
+        <div className="hidden absolute lg:flex -top-4 right-0">
           <div className="relative">
             <div className="fill-[#ffd01f] -rotate-25 h-32 w-32 flex relative">
               <GirlsOnly />

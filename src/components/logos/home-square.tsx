@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
-export function HomeWideLogo() {
+export function HomeSquareLogo() {
   useEffect(() => {
     const generalScript = document.createElement("script");
-    generalScript.src = "/logo.js";
+    generalScript.src = "/logo_square.js";
     document.body.appendChild(generalScript);
 
     const script = document.createElement("script");
-    script.src = "/logo_init.js";
+    script.src = "/logo_square_init.js";
     document.body.appendChild(script);
 
     return () => {
@@ -22,14 +22,14 @@ export function HomeWideLogo() {
         id="animation_container"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.00)",
-          width: "1014px",
-          height: "262px",
+          width: "572px",
+          height: "503px",
         }}
       >
         <canvas
           id="canvas"
-          width="1014"
-          height="262"
+          width="572px"
+          height="503px"
           style={{
             position: "absolute",
             display: "block",
@@ -41,8 +41,8 @@ export function HomeWideLogo() {
           style={{
             pointerEvents: "none",
             overflow: "hidden",
-            width: "1014px",
-            height: "262px",
+            width: "572px",
+            height: "503px",
             position: "absolute",
             left: "0px",
             top: "0px",

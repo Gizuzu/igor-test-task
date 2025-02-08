@@ -1,28 +1,3 @@
-const Nonagon = ({ size = 100, stroke = "black" }) => {
-  const center = size / 2;
-  const radius = size * 0.4;
-  const points = [];
-
-  // Генерация точек для девятиугольника
-  for (let i = 0; i < 9; i++) {
-    const angle = (i * 2 * Math.PI) / 9 - Math.PI / 2;
-    const x = center + radius * Math.cos(angle);
-    const y = center + radius * Math.sin(angle);
-    points.push(`${x},${y}`);
-  }
-
-  return (
-    <svg width={size} height={size}>
-      <polygon
-        points={points.join(" ")}
-        fill="#FFD700" // Желтый цвет
-        stroke={stroke}
-        strokeWidth="2"
-      />
-    </svg>
-  );
-};
-
 function GirlsOnly() {
   return (
     <>
@@ -31,7 +6,7 @@ function GirlsOnly() {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 236 238"
       >
-        <title>Vector Smart Object</title>
+        <title>Girls Only</title>
         <g id="Isolation Mode">
           <path
             id="&lt;Path&gt;"

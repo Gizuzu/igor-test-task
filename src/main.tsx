@@ -9,9 +9,5 @@ createRoot(document.getElementById("root")!).render(
     <Router />
 
     <ChatDialog />
-
-    <span className="z-10 text-white uppercase text-xs tracking-wider fixed bottom-2 left-4">
-      * нереальными
-    </span>
   </StrictMode>
 );

@@ -75,10 +75,10 @@ function WinnersView() {
       <main className="max-w-[1200px] w-full mx-auto">
         <Navbar />
 
-        <section className="w-full flex flex-col items-center relative h-[600px] overflow-visible">
-          <div className="grid grid-cols-2">
+        <section className="w-full flex flex-col items-center relative h-[600px] overflow-visible px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div>
-              <span className="text-[120px] flex items-center text-[#ffd01f] uppercase">
+              <span className="text-[80px] lg:text-[120px] flex items-center text-[#ffd01f] uppercase">
                 Ум
                 <span className="relative">
                   н
@@ -86,7 +86,7 @@ function WinnersView() {
                     src="/images/sitting_women.svg"
                     height="82"
                     width="82"
-                    className="absolute top-4"
+                    className="absolute top-3 lg:top-4 scale-90 lg:scale-100"
                   />
                 </span>
                 ые <span className="text-[#874cff] mx-auto">&</span>
@@ -113,11 +113,14 @@ function WinnersView() {
               </div>
             </div>
             <div>
-              <span className="text-[120px] flex items-center uppercase text-[#ff62bd]">
+              <span className="text-[80px] lg:text-[120px] flex items-center uppercase text-[#ff62bd]">
                 К
                 <span className="relative">
                   р
-                  <img src="/images/viselchak.svg" className="absolute top-9" />
+                  <img
+                    src="/images/viselchak.svg"
+                    className="absolute top-6 lg:top-9"
+                  />
                 </span>
                 асивые
               </span>
@@ -150,7 +153,7 @@ function WinnersView() {
           />
           <img
             src="/images/viselchak_yellow.svg"
-            className="absolute bottom-10 -rotate-25 -scale-y-400 -scale-x-400 -z-[1] left-150"
+            className="hidden lg:block absolute bottom-10 -rotate-25 -scale-y-400 -scale-x-400 -z-[1] left-150"
           />
           <img
             src="/images/shh_women.svg"

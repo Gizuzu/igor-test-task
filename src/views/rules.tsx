@@ -25,15 +25,15 @@ function RulesView() {
       <main className="max-w-[1200px] w-full mx-auto">
         <Navbar />
 
-        <section className="w-full flex flex-col items-center justify-center py-8">
+        <section className="w-full flex flex-col items-center justify-center py-8 px-4">
           <span className="uppercase text-white mt-11 tracking-[0.14em] text-[21px]">
             Без паники, на самом деле всё очёнь просто, у нас есть два
             гигантских конкурса:
           </span>
 
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div>
-              <span className="text-[120px] flex items-center text-[#ffd01f] uppercase">
+              <span className="text-[80px] lg:text-[120px] flex items-center text-[#ffd01f] uppercase">
                 Ум
                 <span className="relative">
                   н
@@ -41,7 +41,7 @@ function RulesView() {
                     src="/images/sitting_women.svg"
                     height="82"
                     width="82"
-                    className="absolute top-4"
+                    className="absolute top-3 lg:top-4 scale-90 lg:scale-100"
                   />
                 </span>
                 ые <span className="text-[#874cff] mx-auto">&</span>
@@ -58,11 +58,14 @@ function RulesView() {
               </ul>
             </div>
             <div>
-              <span className="text-[120px] flex items-center uppercase text-[#ff62bd]">
+              <span className="text-[80px] lg:text-[120px] flex items-center uppercase text-[#ff62bd]">
                 К
                 <span className="relative">
                   р
-                  <img src="/images/viselchak.svg" className="absolute top-9" />
+                  <img
+                    src="/images/viselchak.svg"
+                    className="absolute top-6 lg:top-9"
+                  />
                 </span>
                 асивые
               </span>

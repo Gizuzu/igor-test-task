@@ -6,6 +6,7 @@
 
 body {
   background-color: #a770ff;
+  overflow-x: hidden;
 }
 
 body::before {

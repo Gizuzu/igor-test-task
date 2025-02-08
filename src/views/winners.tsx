@@ -26,7 +26,7 @@ function WinnersList({
         >
           <span>{index + 1}.</span>
           <span className="ml-4 tracking-widest">{winner.name}</span>
-          <span className="ml-auto flex items-center gap-2 px-2 bg-black/10">
+          <span className="ml-auto flex items-center justify-start gap-2 px-2 min-w-[60px] bg-black/10">
             <span className={`fill-[${iconColor}] flex h-3 w-3`}>
               <Icon />
             </span>{" "}
@@ -65,11 +65,11 @@ function WinnersView() {
 
         <img
           src="/images/standing_women.svg"
-          className="absolute -bottom-30 rotate-15 -z-[1] left-30 scale-400"
+          className="absolute -bottom-30 rotate-15 -z-[1] left-25 scale-400"
         />
         <img
           src="/images/viselchak_yellow.svg"
-          className="hidden lg:block absolute bottom-10 -rotate-25 -scale-y-400 -scale-x-400 -z-[1] left-150"
+          className="hidden lg:block absolute bottom-10 -rotate-25 -scale-y-400 -scale-x-400 -z-[1] left-160"
         />
         <img
           src="/images/shh_women.svg"

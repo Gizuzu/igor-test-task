@@ -58,13 +58,21 @@ function RulesView() {
         </span>
 
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div>
+          <div className="relative">
             <SmartPart />
             <RulesList rules={smartRules} bgColor="bg-[#ffcf1f]" />
+
+            <div className="h-[40vh] w-[70vw] absolute -z-1 top-0 lg:-top-85 left-0 lg:-left-50 fill-[#ff62bd]">
+              <QustionIcon />
+            </div>
           </div>
-          <div>
+          <div className="relative">
             <BeautifulPart />
             <RulesList rules={beautifulRules} bgColor="bg-[#ff62bd]" />
+
+            <div className="h-[40vh] w-[70vw] absolute -z-1 top-20 lg:top-85 left-0 lg:-left-50 -scale-x-100 -scale-y-100 fill-[#00d7ff]">
+              <QustionIcon />
+            </div>
           </div>
         </div>
 
@@ -76,15 +84,6 @@ function RulesView() {
           </Button>
         </Link>
       </section>
-
-      <div className="absolute top-0 left-0 w-full py-4 -z-[1]">
-        <div className="h-[40vh] w-[70vw] -top-30 -left-36 absolute fill-[#ff62bd]">
-          <QustionIcon />
-        </div>
-        <div className="h-[40vh] w-[70vw] top-0 -right-20 -scale-y-100 -scale-x-100 translate-y-[86vh] absolute fill-[#00d6ff]">
-          <QustionIcon />
-        </div>
-      </div>
     </>
   );
 }

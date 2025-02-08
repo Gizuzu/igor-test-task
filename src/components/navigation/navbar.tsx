@@ -32,14 +32,14 @@ export function Navbar() {
 
         <div className="absolute flex -top-4 right-0">
           <div className="relative">
-            <div className="fill-[#ffd01f] -rotate-25 h-32 w-32 flex relative">
+            <div className="fill-[#ffd01f] -rotate-20 h-36 w-36 flex relative">
               <GirlsOnly />
-              <div className="absolute text-[#ff62bd] w-full text-[29px] font-bold h-full flex flex-col items-center justify-center">
+              <div className="absolute uppercase text-[#ff62bd] w-full text-[29px] font-bold h-full flex flex-col items-center justify-center">
                 <span className="-mb-4">Girls</span>
                 <span>only!</span>
               </div>
             </div>
-            <div className="top-0 -z-[1] left-0 h-32 w-32 flex absolute fill-[#00d6ff]">
+            <div className="top-0 -z-[1] left-0 h-36 w-36 flex absolute fill-[#00d6ff]">
               <GirlsOnly />
             </div>
           </div>

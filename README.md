@@ -1,5 +1,7 @@
 # Тестовое задание (React)
 
+[Онлайн превью](https://cheery-tarsier-53db3e.netlify.app/)
+
 ### Установка
 
 ```sh

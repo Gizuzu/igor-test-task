@@ -5228,6 +5228,14 @@ function handleComplete(evt, comp) {
           sRatio = Math.max(xRatio, yRatio);
         }
       }
+      var maxWidth = 572,
+        maxHeight = 503;
+      if (w * sRatio > maxWidth) {
+        sRatio = maxWidth / w;
+      }
+      if (h * sRatio > maxHeight) {
+        sRatio = Math.min(sRatio, maxHeight / h);
+      }
       canvas.width = w * pRatio * sRatio;
       canvas.height = h * pRatio * sRatio;
       canvas.style.width =
@@ -5248,7 +5256,7 @@ function handleComplete(evt, comp) {
       stage.tickOnUpdate = true;
     }
   }
-  makeResponsive(false, "both", false, 1);
+  makeResponsive(true, "both", true, 1);
   AdobeAn.compositionLoaded(lib.properties.id);
   fnStartAnimation();
 }

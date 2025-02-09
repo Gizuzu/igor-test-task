@@ -19,7 +19,7 @@ function HomeView() {
   return (
     <>
       <section className="w-full flex flex-col items-center justify-center py-8">
-        <div className="flex flex-col tracking-widest text-[21px] items-center gap-1 text-white lg:-mb-18">
+        <div className="flex flex-col tracking-widest text-[12px] sm:text-[16px] md:text-[21px] items-center gap-1 text-white lg:-mb-18">
           <span className="uppercase">О май гад!</span>
 
           <span className="uppercase">
@@ -31,7 +31,7 @@ function HomeView() {
           </span>
         </div>
         {currentWidth >= 1200 ? <HomeWideLogo /> : <HomeSquareLogo />}
-        <div className="flex flex-col tracking-widest text-[21px] items-center gap-1 text-white mt-6">
+        <div className="flex flex-col tracking-widest text-[14px] sm:text-[21px] items-center gap-1 text-white mt-6">
           <span className="uppercase">С реально сложными вопросами</span>
           <span className="uppercase">
             и <span className="text-[#00d6ff]">нереальными*</span> призами
@@ -40,14 +40,14 @@ function HomeView() {
 
         <Link to={routes.RULES} className="mt-8">
           <Button>
-            <span className="text-white tracking-[.2rem] text-[21px] uppercase">
+            <span className="text-white tracking-[.2rem] text-[16px] sm:text-[21px] uppercase">
               Участвовать
             </span>
           </Button>
         </Link>
       </section>
 
-      <span className="z-10 text-white uppercase text-xs tracking-widest absolute bottom-2 left-4">
+      <span className="z-10 text-white uppercase text-xs tracking-widest sticky bottom-2 left-4 mt-8 lg:mt-0">
         * нереальными
       </span>
     </>

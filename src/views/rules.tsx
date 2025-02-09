@@ -39,7 +39,7 @@ function RulesList({
       {rules.map((rule, index) => (
         <li key={index} className="mb-2">
           <span
-            className={`tracking-widest text-[15px] uppercase px-1 ${bgColor}`}
+            className={`tracking-widest text-[12px] sm:text-[15px] uppercase px-1 ${bgColor}`}
           >
             {rule}
           </span>
@@ -53,7 +53,7 @@ function RulesView() {
   return (
     <>
       <section className="w-full flex flex-col items-center justify-center py-8 px-4">
-        <span className="uppercase text-white mt-11 tracking-[0.14em] text-[21px]">
+        <span className="uppercase text-white mt-11 tracking-[0.14em] text-[16px] sm:text-[21px]">
           Без паники, на самом деле всё очёнь просто, у нас есть два гигантских
           конкурса:
         </span>
@@ -63,7 +63,7 @@ function RulesView() {
             <SmartPart />
             <RulesList rules={smartRules} bgColor="bg-[#ffcf1f]" />
 
-            <div className="h-50 w-100 lg:h-70 lg:w-232 absolute -z-1 -top-20 lg:-top-85 left-0 lg:-left-50 fill-[#ff62bd]">
+            <div className="h-40 w-80 sm:h-50 sm:w-100 lg:h-70 lg:w-232 absolute -z-1 -top-20 lg:-top-85 left-0 lg:-left-50 fill-[#ff62bd]">
               <QustionIcon />
             </div>
           </div>
@@ -71,7 +71,7 @@ function RulesView() {
             <BeautifulPart />
             <RulesList rules={beautifulRules} bgColor="bg-[#ff62bd]" />
 
-            <div className="h-50 w-100 lg:h-70 lg:w-232 absolute -z-1 top-45 lg:top-85 left-0 lg:-left-50 -scale-x-100 -scale-y-100 fill-[#00d7ff]">
+            <div className="h-40 w-80 sm:h-50 sm:w-100 lg:h-70 lg:w-232 absolute -z-1 top-45 lg:top-85 left-0 lg:-left-50 -scale-x-100 -scale-y-100 fill-[#00d7ff]">
               <QustionIcon />
             </div>
           </div>
@@ -79,7 +79,7 @@ function RulesView() {
 
         <Link to={routes.WINNERS} className="mt-16">
           <Button className="bg-[#ff61bd]">
-            <span className="text-white tracking-[.2rem] text-[21px] uppercase">
+            <span className="text-white tracking-[.2rem] text-[16px] sm:text-[21px] uppercase">
               Узнать счёт
             </span>
           </Button>

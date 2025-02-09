@@ -28,7 +28,7 @@ function WinnersList({
       {winners.map((winner, index) => (
         <div
           key={index}
-          className="text-[15px] uppercase flex items-center gap-4 w-full"
+          className="text-[12px] sm:text-[15px] uppercase flex items-center gap-4 w-full"
         >
           <span>{index + 1}.</span>
           <span className="ml-4 tracking-widest">{winner.name}</span>

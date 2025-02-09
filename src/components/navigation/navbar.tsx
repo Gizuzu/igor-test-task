@@ -31,7 +31,7 @@ export function Navbar() {
         </div>
         <div></div>
 
-        <div className="absolute flex -top-4 right-0">
+        <div className="absolute flex -top-4 right-0 -z-1">
           <div className="relative">
             <div className="fill-[#ffd01f] -rotate-20 h-36 w-36 flex relative">
               <GirlsOnly />

@@ -63,7 +63,7 @@ function RulesView() {
             <SmartPart />
             <RulesList rules={smartRules} bgColor="bg-[#ffcf1f]" />
 
-            <div className="h-[40vh] w-[70vw] absolute -z-1 top-0 lg:-top-85 left-0 lg:-left-50 fill-[#ff62bd]">
+            <div className="h-50 w-100 lg:h-70 lg:w-232 absolute -z-1 -top-20 lg:-top-85 left-0 lg:-left-50 fill-[#ff62bd]">
               <QustionIcon />
             </div>
           </div>
@@ -71,7 +71,7 @@ function RulesView() {
             <BeautifulPart />
             <RulesList rules={beautifulRules} bgColor="bg-[#ff62bd]" />
 
-            <div className="h-[40vh] w-[70vw] absolute -z-1 top-20 lg:top-85 left-0 lg:-left-50 -scale-x-100 -scale-y-100 fill-[#00d7ff]">
+            <div className="h-50 w-100 lg:h-70 lg:w-232 absolute -z-1 top-45 lg:top-85 left-0 lg:-left-50 -scale-x-100 -scale-y-100 fill-[#00d7ff]">
               <QustionIcon />
             </div>
           </div>
